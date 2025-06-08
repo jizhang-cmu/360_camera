@@ -2,7 +2,7 @@
 
 In the 'extrinsic_latency_calib/launch/extrinsic_calib.launch' file, set image resolution, 'imageWidth' and 'imageHeight'. Measure the camera offsets w.r.t. the lidar and set 'camX' (forward), 'camY' (left), and 'camZ' (up). If using a regular camera instead of a 360 camera, set 'is360Cam' to false, calibrate the camera intrinsics, and set image center, 'cx' and 'cy', focal length, 'fx' and 'fy', and distortion coefficients, 'k1', 'k2', 'p1', and 'p2'.
 
-Start the autonomy system and the camera driver. Then, use the command line below to launch the extrinsic calibration node. Users should see an image with lidar point cloud projected onto it, as shown below. Click the image to bring it to the front. Press '1-6' on the keyboard to adjust the camera angle and align the image with the lidar point cloud. Update 'camRoll', 'camPitch', and 'camYaw' in the launch file accordingly.
+Plug the camera into the computer with a USB cable, turn on the camera, and set it to live video mode (click the 'Mode' button until you see 'LIVE' under the camera icon on the screen). Start the camera driver and the autonomy system together. Then, use the command line below to launch the extrinsic calibration node. Users should see an image with lidar point cloud projected onto it as shown below. Click the image to bring it to the front. Press '1-6' on the keyboard to adjust the camera angle and align the image with the lidar point cloud. Update 'camRoll', 'camPitch', and 'camYaw' in the launch file accordingly.
 ```
   source install/setup.sh
   ros2 launch extrinsic_latency_calib extrinsic_calib.launch
@@ -14,7 +14,7 @@ Start the autonomy system and the camera driver. Then, use the command line belo
 
 ## Latency Calibration
 
-Start the autonomy system and the camera driver. Then, use the command line below to launch the latency calibration node. Users should see an image with tracked features, as shown below. The node saves an 'imu.txt' file and an 'image.txt' file in the 'extrinsic_latency_calib/data' folder. The format is described in the 'readme.txt' file in the same folder. Now, use the joystick to rotate the vehicle back and forth 20-30 times.
+Plug the camera into the computer with a USB cable, turn on the camera, and set it to live video mode (click the 'Mode' button until you see 'LIVE' under the camera icon on the screen). Start the camera driver and the autonomy system together. Then, use the command line below to launch the latency calibration node. Users should see an image with tracked features as shown below. The node saves an 'imu.txt' file and an 'image.txt' file in the 'extrinsic_latency_calib/data' folder. The format is described in the 'readme.txt' file in the same folder. Now, use the joystick to rotate the vehicle back and forth 20-30 times.
 ```
   source install/setup.sh
   ros2 launch extrinsic_latency_calib latency_calib.launch

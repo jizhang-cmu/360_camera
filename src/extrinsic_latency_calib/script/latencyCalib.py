@@ -3,7 +3,7 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 
-image_scale = 0.083;
+image_scale = 0.065;
 image_latency = 0;
 
 imu_array  = []
