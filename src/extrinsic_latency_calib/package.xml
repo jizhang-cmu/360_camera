@@ -1,0 +1,23 @@
+<package format="3">
+  <name>extrinsic_latency_calib</name>
+  <version>0.0.1</version>
+  <description>Extrinsic and Latency Calib</description>
+  <maintainer email="zhangji@cmu.edu">Ji Zhang</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>pcl_ros</depend>
+  <depend>cv_bridge</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

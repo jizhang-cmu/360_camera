@@ -1,0 +1,11 @@
+<launch>
+
+  <node pkg="extrinsic_latency_calib" exec="latencyCalib" name="latencyCalib" output="screen">
+    <param name="imu_save_dir" value="$(find-pkg-prefix extrinsic_latency_calib)/data/imu_latency.txt" />
+    <param name="image_save_dir" value="$(find-pkg-prefix extrinsic_latency_calib)/data/image_latency.txt" />
+    <param name="resizeImageWidth" value="960" />
+    <param name="maxTrackDis" value="100.0" />
+    <param name="boundary" value="20" />
+  </node>
+
+</launch>

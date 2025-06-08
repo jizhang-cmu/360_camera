@@ -1,0 +1,29 @@
+<launch>
+
+  <node pkg="extrinsic_latency_calib" exec="extrinsicCalib" name="extrinsicCalib" output="screen">
+    <param name="minRange" value="0.5" />
+    <param name="maxRange" value="10.0" />
+    <param name="angAdjustment" value="0.01" />
+    <param name="voxelSize" value="0.02" />
+    <param name="imageSkipYaw" value="10.0" />
+    <param name="imageSkipNum" value="2" />
+    <param name="camRoll" value="-1.5707963" />
+    <param name="camPitch" value="0.0" />
+    <param name="camYaw" value="-1.5707963" />
+    <param name="camX" value="-0.12" />
+    <param name="camY" value="-0.075" />
+    <param name="camZ" value="0.255" />
+    <param name="is360Cam" value="true" /> <!--360 camera: true, regular camera: false/-->
+    <param name="imageWidth" value="1920" /> <!--For both 360 camera and regular camera/-->
+    <param name="imageHeight" value="640" /> <!--For both 360 camera and regular camera/-->
+    <param name="fx" value="480.0" /> <!--For regular camera only/-->
+    <param name="fy" value="480.0" /> <!--For regular camera only/-->
+    <param name="cx" value="960.5" /> <!--For regular camera only/-->
+    <param name="cy" value="320.5" /> <!--For regular camera only/-->
+    <param name="k1" value="0.0" /> <!--For regular camera only/-->
+    <param name="k2" value="0.0" /> <!--For regular camera only/-->
+    <param name="p1" value="0.0" /> <!--For regular camera only/-->
+    <param name="p2" value="0.0" /> <!--For regular camera only/-->
+  </node>
+
+</launch>

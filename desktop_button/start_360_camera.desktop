@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=true
+TerminalOptions=bash
+Exec=bash -c "/home/all/360_camera/360_camera_sensorpod.sh"
+#Exec=bash -c "/home/all/360_camera/360_camera_ai_computer.sh"
+Icon=/home/all/start.png
+Name=Application
+Name[en_US]=start_360_camera.desktop
