@@ -1,4 +1,4 @@
-Clone the repository and follow the readme in 'src/receive_theta' to set up the Theta camera driver. Install the dependencies. Then, go to the ROS workspace ('360_camera' folder) and compile.
+Clone the repository and follow the readme in 'src/receive_theta' to set up the 360 camera driver. Install the dependencies. Then, go to the ROS workspace ('360_camera' folder) and compile.
 
   colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 
