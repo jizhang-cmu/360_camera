@@ -35,7 +35,7 @@ Source the ROS workspace and launch the driver (make sure the camera is on/activ
 
 The image messages are published on the '/camera/image' topic. To show images in a window, set 'showImage = true' in 'receive_theta.launch'. The top and bottom margin is set to 'TopBottonMargin = 160', cropping from 960 pixels/180 degs to 640 pixels/120 degs vertically. Set 'imageLatency' to adjust image message timestamps if needed.
 
-## Notes:
+## Notes
 
 The image framerate is set to 10Hz (skipFrameNum = 2) in 'gstthetauvcsrc.c'. It can be set up to 30Hz. The image resolution is set to FHD (1920 * 960) by default in 'thetauvc.h'. It can be set to UHD (3840 * 1920). Make sure to remake and reinstall 'gstthetauvc'.
 
