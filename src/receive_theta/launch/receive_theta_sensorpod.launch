@@ -4,8 +4,8 @@
 
   <node pkg="receive_theta" exec="receiveTheta" name="receiveTheta" output="screen">
     <param name="imuTopicName" value="/imu/data" />
-    <param name="topBottonMargin" value="160" />
-    <param name="imageLatency" value="0.05" />
+    <param name="topBottonMargin" value="240" />
+    <param name="imageLatency" value="0.057" />
     <param name="compQuality" value="50" />
     <param name="alwaysPubCompImage" value="true" />
     <param name="showImage" value="$(var showImage)" />

@@ -15,11 +15,11 @@
     <param name="camZ" value="0.255" />
     <param name="is360Cam" value="true" /> <!--360 camera: true, regular camera: false/-->
     <param name="imageWidth" value="1920" /> <!--For both 360 camera and regular camera/-->
-    <param name="imageHeight" value="640" /> <!--For both 360 camera and regular camera/-->
+    <param name="imageHeight" value="480" /> <!--For both 360 camera and regular camera/-->
     <param name="fx" value="480.0" /> <!--For regular camera only/-->
     <param name="fy" value="480.0" /> <!--For regular camera only/-->
     <param name="cx" value="960.5" /> <!--For regular camera only/-->
-    <param name="cy" value="320.5" /> <!--For regular camera only/-->
+    <param name="cy" value="240.5" /> <!--For regular camera only/-->
     <param name="k1" value="0.0" /> <!--For regular camera only/-->
     <param name="k2" value="0.0" /> <!--For regular camera only/-->
     <param name="p1" value="0.0" /> <!--For regular camera only/-->
