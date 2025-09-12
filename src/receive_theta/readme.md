@@ -12,7 +12,7 @@ In a terminal, go to the 'receive_theta/dependency/libuvc-theta' folder and inst
   sudo /sbin/ldconfig -v
 ```
 
-In a terminal, go to the 'receive_theta/dependency/gstthetauvc/thetauvc' folder and install 'gstthetauvc'. After installation, use 'gst-inspect-1.0 thetauvcsrc' to check if the gstreamer plugin is valid.
+In a terminal, go to the 'receive_theta/dependency/gstthetauvc/thetauvc' folder and install 'gstthetauvc'. After installation, use `gst-inspect-1.0 thetauvcsrc` to check if the gstreamer plugin is valid.
 ```
   make && sudo make install
 ```
