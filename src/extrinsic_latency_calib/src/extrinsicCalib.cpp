@@ -213,7 +213,7 @@ int main(int argc, char** argv)
   nh->get_parameter("p1", p1);
   nh->get_parameter("p2", p2);
 
-  auto subOdom = nh->create_subscription<nav_msgs::msg::Odometry>("/aft_mapped_to_init_incremental", 5, odomHandler);
+  auto subOdom = nh->create_subscription<nav_msgs::msg::Odometry>("/laser_odometry", 5, odomHandler);
 
   auto subScan = nh->create_subscription<sensor_msgs::msg::PointCloud2>("/registered_scan", 2, scanHandler);
 
