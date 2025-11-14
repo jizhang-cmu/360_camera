@@ -30,10 +30,10 @@ In a terminal, go to the '360_camera' ROS workspace folder and compile.
 Source the ROS workspace and launch the driver (make sure the camera is on/active and in live video mode).
 ```
   source install/setup.sh
-  ros2 launch receive_theta receive_theta.launch
+  ros2 launch receive_theta receive_theta_sensorpod.launch
 ```
 
-The image messages are published on the '/camera/image' topic. To show images in a window, set 'showImage = true' in 'receive_theta.launch'. The top and bottom margin is set to 'TopBottonMargin = 160', cropping from 960 pixels/180 degs to 640 pixels/120 degs vertically. Set 'imageLatency' to adjust image message timestamps if needed.
+The image messages are published on the '/camera/image' topic. To show images in a window, set 'showImage = true' in 'receive_theta_sensorpod.launch'. The top and bottom margin is set to 'TopBottonMargin = 160', cropping from 960 pixels/180 degs to 640 pixels/120 degs vertically. Set 'imageLatency' to adjust image message timestamps if needed.
 
 ## Notes
 
