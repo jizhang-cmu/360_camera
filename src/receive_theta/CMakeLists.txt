@@ -5,14 +5,6 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-include_directories(
-  ${catkin_INCLUDE_DIRS}
-  ${OpenCV_INCLUDE_DIRS}
-  "${PROJECT_SOURCE_DIR}/include"
-  /usr/local/include
-  /usr/include
-)
-
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
@@ -20,9 +12,18 @@ find_package(sensor_msgs REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(cv_bridge REQUIRED)
 
+include_directories(
+  ${OpenCV_INCLUDE_DIRS}
+  "${PROJECT_SOURCE_DIR}/include"
+)
+
 add_executable(receiveTheta src/receiveTheta.cpp)
-ament_target_dependencies(receiveTheta rclcpp std_msgs sensor_msgs cv_bridge)
-target_link_libraries(receiveTheta ${OpenCV_LIBRARIES})
+target_link_libraries(receiveTheta
+  rclcpp::rclcpp
+  ${std_msgs_TARGETS}
+  ${sensor_msgs_TARGETS}
+  cv_bridge::cv_bridge
+  ${OpenCV_LIBRARIES})
 
 install(TARGETS
   receiveTheta
