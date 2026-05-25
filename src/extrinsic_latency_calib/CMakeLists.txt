@@ -27,34 +27,12 @@ include_directories(
 )
 
 add_executable(extrinsicCalib src/extrinsicCalib.cpp)
-target_link_libraries(extrinsicCalib
-  rclcpp::rclcpp
-  ${std_msgs_TARGETS}
-  ${sensor_msgs_TARGETS}
-  ${nav_msgs_TARGETS}
-  message_filters::message_filters
-  tf2::tf2
-  tf2_ros::tf2_ros
-  tf2_geometry_msgs::tf2_geometry_msgs
-  pcl_conversions::pcl_conversions
-  cv_bridge::cv_bridge
-  ${PCL_LIBRARIES}
-  ${OpenCV_LIBRARIES})
+target_link_libraries(extrinsicCalib rclcpp::rclcpp std_msgs::std_msgs sensor_msgs::sensor_msgs nav_msgs::nav_msgs message_filters::message_filters tf2::tf2 tf2_ros::tf2_ros tf2_geometry_msgs::tf2_geometry_msgs pcl_conversions::pcl_conversions cv_bridge::cv_bridge)
+target_link_libraries(extrinsicCalib ${PCL_LIBRARIES} ${OpenCV_LIBRARIES})
 
 add_executable(latencyCalib src/latencyCalib.cpp)
-target_link_libraries(latencyCalib
-  rclcpp::rclcpp
-  ${std_msgs_TARGETS}
-  ${sensor_msgs_TARGETS}
-  ${nav_msgs_TARGETS}
-  message_filters::message_filters
-  tf2::tf2
-  tf2_ros::tf2_ros
-  tf2_geometry_msgs::tf2_geometry_msgs
-  pcl_conversions::pcl_conversions
-  cv_bridge::cv_bridge
-  ${PCL_LIBRARIES}
-  ${OpenCV_LIBRARIES})
+target_link_libraries(latencyCalib rclcpp::rclcpp std_msgs::std_msgs sensor_msgs::sensor_msgs nav_msgs::nav_msgs message_filters::message_filters tf2::tf2 tf2_ros::tf2_ros tf2_geometry_msgs::tf2_geometry_msgs pcl_conversions::pcl_conversions cv_bridge::cv_bridge)
+target_link_libraries(latencyCalib ${PCL_LIBRARIES} ${OpenCV_LIBRARIES})
 
 install(TARGETS
   extrinsicCalib latencyCalib
